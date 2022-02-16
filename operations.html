@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>javascript methods</title>
+    <style>
+
+        .menustyle {
+            float: left;
+            height: 800px;
+            width: 40%;
+            background-color: rgb(153, 193, 196);
+            margin-left: 0%;
+            font-weight: bolder;
+            color: rgb(19, 18, 18);
+        }
+
+        .menu {
+            background-color: black;
+            border-radius: 5%;
+            float: left;
+            margin-left: 50px;
+            color: azure;
+            font-size: 100%;
+            height: 5%;
+            width: 9%;
+            margin-top: 5px;
+            position: fixed;
+            margin-top:110px;
+          
+        }
+
+        .mbody {
+            float: left;
+            width: 100%;
+            height: 800px;
+            background-color: rgb(153, 193, 196);
+            margin-left: 10px;
+        }
+       
+
+        h1 {
+            float: left;
+            margin-left: 2px;
+            background-color: white;
+            height: 7%;
+            width: 99%;
+            color: rgb(0, 0, 0);
+            margin-top: 7px;
+            border: 8px gold solid;
+            border-radius: 50px;
+            padding-top: 2%;
+            
+        }
+
+        li {
+            font-weight: bolder;
+            padding-bottom: 2%;
+            font-size: extra-large;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    <h2 style="border-bottom: 3px rgb(165, 142, 142) solid; margin-bottom: 8px; background-color: darkseagreen; height: 19%; margin-top: 0px; padding-top: 4%;">
+        <center style="margin-bottom:40px; font-size:xx-large;  font-family:'Calisto MT'; background-color:darkseagreen">Various Operation on Array,Strings,Numbers,Boolean</center>
+    </h2>
+    <div class="mbody">
+        <div class="menustyle">
+            <button onclick="fun()" class="menu" style="margin-left:300px">Menu</button><br>
+            <br>
+            <h2 style="margin-left:250px">Click Here for Perform Task  </h2>
+
+           
+
+            <br>
+
+
+
+
+
+        </div>
+
+        <ol style="font-size: x-large">
+            <li>  Press 1 for sum of digits. </li>
+            <li>  Press 2 for Date objects</li>
+            <li>  Press 3 for various operations on Array object.</li>
+            <li>  Press 4 for Number objects</li>
+            <li>  Press 5 for String objects.</li>
+            <li>  Press 6 for Boolean objects.</li>
+
+        </ol>
+
+    </div>
+
+    <script type="text/javascript">
+
+        function fun() {
+
+            var press = parseInt(prompt("Enter 1 for Sum of Digits \nEnter 2 for Date Objects \nEnter 3 for Array Objects \nEnter 4 for Number Objects \nEnter 5 for String Objects \nEnter 6 for Boolean Objects"));
+
+            switch (press) {
+                case 1:
+
+                    {
+                        var sum = 0;
+                        var number = (parseInt(prompt("Enter a Number For Sum Of Digit")));
+
+                        while (number > 0) {
+                            sum = sum + number % 10;
+                            number = parseInt(number / 10);
+                        }
+                        document.write("Sum of Digit Is: " + " " + sum);
+
+                        break;
+                    }
+
+                case 2:
+                    {
+                        var date = new Date();
+
+
+
+                        document.write("<br>Date is:" + date.getDate());
+                        document.write("<br>Day is:" + date.getDay());
+                        document.write("<br>Year is:" + date.getFullYear());
+                        document.write("<br>Month is:" + date.getMonth());
+                        document.write("<br>Time is:" + date.getTime());
+                        document.write("<br>Hours is:" + date.getHours());
+                        document.write("<br>Minutes is:" + date.getMinutes());
+                        document.write("<br>Seconds is:" + date.getSeconds());
+                        document.write("<br>UTC Date is:" + date.getUTCDate());
+                        document.write("<br>GMT Date is:" + date.toGMTString());
+                        document.write("<br>Local Date is:" + date.toLocalDateString());
+                        document.write("<br>Date String is:" + date.toDateString());
+
+
+                        break;
+                    }
+
+                case 3:
+                    {
+
+                        var fruits = [5];
+                        var friends = new Array("Bhavna", "Priyanka", "Rohini", "Bhakti", "Shreya");
+                        var numbers = [5]
+                        for (var i = 0; i < 5; i++) {
+                            fruits[i] = prompt("Enter 5 Fruits name");
+                        }
+                        for (var i = 0; i < 5; i++) {
+                            numbers[i] = (parseInt(prompt("Enter 5 Integers")));
+                        }
+
+                        document.write("<br>Fruits List :" + " " + fruits);
+                        document.write("<br>Numbers array : " + " " + numbers);
+                        document.write("<br>friends :" + " " + friends);
+                        document.write("<br>Length of Array 1 :" + " " + fruits.length + " and Array 2 is:" + friends.length);
+                        document.write("<br> Concat of two arrays :" + " " + fruits.concat(friends));
+                        document.write("<br>join arrays in string :" + " " + fruits.join(''));
+                        document.write("<br>index of Akshay in second arrray :" + " " + friends.indexOf("Akshay"));
+                        document.write("<br>pop remove last element  :" + " " + fruits.pop());
+                        document.write("<br>fruit lists :" + " " + fruits);
+                        document.write("<br>Adding water melon  using push :" + " " + fruits.push("water melon"));
+                        document.write("<br>fruit lists :" + " " + fruits);
+                        document.write("<br>Reversing fruit lists array :" + " " + fruits.reverse());
+                        document.write("<br>Sorting fruit lists array :" + " " + fruits.sort());
+                        document.write("<br>Slicing fruit lists array :" + " " + fruits.slice(1, 4));
+                        document.write("<br>Numbers Concat With Fruits :" + " " + numbers.concat(fruits));
+                        document.write("<br>Numbers Array Reversing :" + " " + numbers.reverse());
+
+
+
+                        break;
+                    }
+
+
+
+
+                case 4:
+                    {
+                        var num = (parseInt(prompt("Enter a No:")));
+
+
+                        document.write("<br> Number String is:" + num.toString());
+                        document.write("<br> Exponential of a Number is:" + num.toExponential(3));
+                        document.write("<br> Fixed Number is:" + num.toFixed(3));
+                        document.write("<br> Specified Length is:" + num.toPrecision());
+                        document.write("<br> Number as a Number is:" + num.valueOf());
+
+
+
+                        break;
+                    }
+                case 5:
+                    {
+                        var value = prompt("Enter First String");
+                        var value1 = prompt("Enter Second String ");
+                        var value2 = prompt("Enter Third String ");
+                        var v3 = prompt("Enter Fourth String ");
+
+                        document.write("<br>Character at Specified Index is:" + " " + value.charAt(2));
+                        document.write("<br>Uncoded value at given Index is:" + " " + value.charCodeAt(3));
+                        document.write("<br>String after Concatination is:" + " " + value.concat(" ", value1, " ", value2));
+                        document.write("<br>Uppercase string1 is:" + " " + value.toUpperCase());
+                        document.write("<br>Uppercase string2 is:" + " " + value1.toUpperCase());
+                        document.write("<br>Uppercase string3 is:" + " " + value2.toUpperCase());
+                        document.write("<br>Lowercase string1 is:" + " " + value.toLowerCase());
+                        document.write("<br>Lowercase string2 is:" + " " + value1.toLowerCase());
+                        document.write("<br>Lowercase string3 is:" + " " + value2.toLowerCase());
+                        document.write("<br>Index of String is:" + " " + value.indexOf("e"));
+                        document.write("<br>Split of String is:" + " " + v3.split(""));
+                        document.write("<br>Last Index of String is:" + " " + value.lastIndexOf("n"));
+                        document.write("<br>Replacing t to T in String1 :" + " " + value.replace("t", "T"));
+                        document.write("<br>Searching Bagul in string4:" + " " + v3.search('Sahebrao'));
+                        document.write("<br>matching n in  String :" + " " + value.match("n"));
+                        document.write("<br>Slicing   String1 :" + " " + value.slice(3, 6));
+                        break;
+                    }
+
+
+                case 6:
+                    {
+
+
+                        let a = (parseInt(prompt("Enter 1st No:")));
+                        document.write("<br>Boolean is:" + Boolean(a));
+                        let b = (parseInt(prompt("Enter 2nd No:")));
+                        document.write("<br>Boolean is:" + Boolean(b));
+                        document.write("<br>A = B:" + Boolean(a == b));
+                        document.write("<br>A < B:" + Boolean(a < b));
+                        document.write("<br>A > B:" + Boolean(a > b));
+                        document.write("<br>A <= B:" + Boolean(a <= b));
+                        document.write("<br>A >= B:" + Boolean(a >= b));
+                        document.write("<br>A != B:" + Boolean(a != b));
+
+                        break;
+
+
+                    }
+
+                default:
+                    alert("Please Enter valid Input");
+            }
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

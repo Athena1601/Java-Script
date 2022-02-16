@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+
+	<style>
+.in{
+border: 1px rgb(0, 0, 0) solid;
+border-radius: 5px;
+}
+h1{
+	background-color: rgba(255, 255, 255, 0.61);
+	border: 3px rgb(255, 255, 255) solid;
+	border-radius: 5px;
+	height: 60px;
+	text-align: center;
+    margin-top: 0%;
+	padding-top: 2%;
+	margin-bottom: 10px;
+}
+	</style>
+	</head>
+	<body bgcolor="#98A19C">
+	<center><h1>Student Registration Form</h1>
+        
+        <form action="submit.html" target="_blank" autocomplete="on" >
+			<fieldset>
+				<legend><h2>Student Personal details</h2></legend>
+	<table>
+	
+	<tr>
+		<td><b>Firstname:</td></b>
+	    <td> <input class="in" type="text" placeholder="first name"  id="fname"  title="Please Enter More Than 4 Letters"  maxlength="15" minlength="4" required autocomplete="on">  </td>
+	    <td><b> Middle Name:</td></b> 
+		<td> <input class="in" type="text" placeholder="middle name" required  autocomplete="on"> </td>
+		<td><b>Surname:</td></b>  
+		<td> <input class="in" type="text" placeholder="surname" required > </td>
+	</tr>
+	<tr>
+		<td><b>Father's First Name:</td></b>
+		<td> <input class="in" type="text" placeholder="first name" required> </td>
+		<td><b>Middle Name:</td></b>
+		<td> <input class="in" type="text" placeholder="middle name"> </td>
+		<td><b>Surname:</td></b>
+		<td> <input class="in" type="text" placeholder="surname" required> </td>
+	</tr>
+	<tr>
+	    <td><b>Address</td></b>
+        <td><textarea class="in" name="Address" id="Address" cols="20" rows="2" required></textarea></td>
+		<td><b> Date of Birth:</td></b>
+		<td><input class="in" type="date"  min="1990-01-01" max="2010-01-01" title="your birth year should More than 1990 and less than 2010" required> </td>
+		<td><b>Contact Number:</td></b>
+		<td><input class="in" type="tel" placeholder="0123456789" maxlength="10" required></td>
+	</tr>
+	<tr>
+		<td><b> Email Id:</td></b>
+		<td> <input class="in" type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"title="Enter Valid Email" required> 
+		</td>
+        <td> <b> Password:</td></b>
+		<td> <input class="in" type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required> 
+		</td>
+		<td><b> Gender:</td></b>
+		<td> <input class="in" type="radio" name="gender">Male
+			 <input class="in" type="radio" name="gender">Female
+			 <input class="in" type="radio" name="gender">other
+		</td>
+	</tr>
+	
+	<tr>
+		<td><b> Educational Qualification:</td></b>
+					<td> 
+						<select class="in">
+						<option>select </option>
+						<option>SSC</option>
+						<option>HSC </option>
+						<option>Graduation </option>
+						<option>Post-Graduation </option>
+					</td>
+		<td><b> Religion:</td></b>
+		<td>
+		    <select class="in">
+			   <option>select<option>
+			   <option>Hinduism<option>
+			   <option>Christianity<option>
+			   <option>Jainism<option>
+			   <option>Buddhism<option>
+			   <option>Islam<option>
+		</td>
+		<td><b> Mother Tongue:</td></b>
+		<td><input class="in" type="text" placeholder="mother tongue" name=""> </td>	
+	</tr>
+	<tr>
+		<td><b> Type of Candidature:</td></b>
+		<td> 
+			<select class="in">
+			<option>select </option>
+			<option>Maharastra</option>
+			<option>Other than Maharastra</option>
+			<option>Minority</option>
+		</td>
+		<td><b> Category:</td></b>
+		<td> 
+			<select class="in">
+			<option>select </option>
+			<option>Open</option>
+			<option>VJDT/NT/SBC</option>
+			<option>ST</option>
+			<option>SC</option>
+			<option>OBC/EBC</option>
+			<option>SEBC</option>
+			<option>EWS</option>
+		</td>
+		<td><b>Person with Disability:</td></b> 
+		<td><input class="in" type="radio" name="PWD">Yes
+			<input class="in" type="radio" name="PWD">No
+		</td>
+	</tr>	
+	<tr>	
+		<td><b>Annual Income:</td></b>
+		<td><input class="in" type="number" placeholder="income" name=""></td>
+		<td><b>Facility Required:</td></b>
+			<td><input class="in" type="checkbox"Hostel>Hostel
+			<input class="in" type="checkbox"Gym>Gym
+			</td>
+	</tr>
+
+</table>
+
+
+</fieldset>
+<fieldset>
+	<legend><h2>Qualification Details</h2></legend>
+	<table>
+				<tr>
+					<td><b>Qualification</td></b>
+					<td><b>Marks Obtained</td></b>
+					<td><b>Marks out of</td></b>
+					<td><b>Percentage</td></b>
+					<td><b>Upload Markseet</td></b>
+				</tr>
+				<tr>
+					<td><b>10<sup>th</sup>/ S.S.C :</td></b>
+					<td><input type="text" placeholder="marks" required></td>
+					<td><input type="text" placeholder="total" required></td>
+					<td><input type="text" placeholder="percentage" required></td>
+					<td><input type="file" name="fileupload" accept="image/*" required></td>
+				</tr>
+				<tr>
+					<td><b>12<sup>th</sup>/ H.S.C/ Diploma  :</td></b>
+					<td><input type="text" placeholder="marks" required></td>
+					<td><input type="text" placeholder="total" required></td>
+					<td><input type="text" placeholder="percentage" required></td>
+					<td><input type="file" name="fileupload" accept="image/*"multiple required></td>
+				</tr>				
+				<tr>
+					<td><b> Graduation :</td></b>
+					<td><input type="text" placeholder="marks" required></td>
+					<td><input type="text" placeholder="total"required></td>
+					<td><input type="text" placeholder="percentage" required></td>
+					<td><input type="file" name="fileupload" accept="image/*"multiple required ></td>
+				</tr>
+				<tr>
+					<td><b> Other :</td></b>
+					<td><input type="text" placeholder="marks" ></td>
+					<td><input type="text" placeholder="total" ></td>
+					<td><input type="text" placeholder="percentage" ></td>
+					<td><input type="file" name="fileupload" accept="image/*"multiple></td>
+				</tr>	
+			</table>	
+		</fieldset>	
+				<center>
+			
+				<input type="reset" name="reset" value="Reset"/>
+				<input type="submit" name="submit" value="Submit"/>
+		</center>
+
+				</form>
+				<script src="operations.js"></script>
+		</body>
+</html>
